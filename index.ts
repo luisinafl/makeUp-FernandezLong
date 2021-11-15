@@ -14,7 +14,20 @@ let lucia = new Client("lucia", false);
 let clients = [maria, lucia];
 console.log(clients);
 
-class Foundation {
+class BaseContent {
+    constructor (
+        public brand: string,
+        public shade: string | number,
+        public price: number
+    ) {
+        this.brand = brand
+        this.shade = shade
+        this.price = price
+    }
+}
+
+
+class Foundation extends BaseContent{
 
     constructor(
         public brand: string,
@@ -22,10 +35,8 @@ class Foundation {
         public coverage: string,
         public price: number
     ) {
-        this.brand = brand
-        this.shade = shade
+        super (brand, shade, price)
         this.coverage = coverage
-        this.price = price
     }
 
 }
@@ -36,15 +47,13 @@ let infallible = new Foundation('Loreal Infallible', 'Golden beige', 'medium', 5
 let foundations = [fitMe, infallible];
 console.log(foundations);
 
-class Lipstick {
+class Lipstick extends BaseContent {
     constructor(
         public brand: string,
         public shade: string,
         public price: number
     ) {
-        this.brand = brand
-        this.shade = shade
-        this.price = price
+        super (brand, shade, price)
     }
 }
 
