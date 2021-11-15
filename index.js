@@ -28,3 +28,18 @@ var fitMe = new Foundation('Maybelline FitMe', 280, 'full', 23.95);
 var infallible = new Foundation('Loreal Infallible', 'Golden beige', 'medium', 54);
 var foundations = [fitMe, infallible];
 console.log(foundations);
+var Lipstick = /** @class */ (function () {
+    function Lipstick(brand, shade, price) {
+        this.brand = brand;
+        this.shade = shade;
+        this.price = price;
+        this.brand = brand;
+        this.shade = shade;
+        this.price = price;
+    }
+    return Lipstick;
+}());
+var colorRichie = new Lipstick('Loreal Color Richie', 'dark peach', 4.5);
+var superStay = new Lipstick('Maybelline Super Stay', 'Seductress', 6.45);
+var lipsticks = [colorRichie, superStay];
+console.log(lipsticks);

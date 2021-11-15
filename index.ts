@@ -35,3 +35,21 @@ let infallible = new Foundation('Loreal Infallible', 'Golden beige', 'medium', 5
 
 let foundations = [fitMe, infallible];
 console.log(foundations);
+
+class Lipstick {
+    constructor(
+        public brand: string,
+        public shade: string,
+        public price: number
+    ) {
+        this.brand = brand
+        this.shade = shade
+        this.price = price
+    }
+}
+
+let colorRichie = new Lipstick('Loreal Color Richie', 'dark peach', 4.5);
+let superStay = new Lipstick('Maybelline Super Stay', 'Seductress', 6.45);
+
+let lipsticks = [colorRichie, superStay];
+console.log(lipsticks);
