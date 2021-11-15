@@ -1,3 +1,4 @@
+//TODO: averiguar como crear muchos objetos en la misma declaracion new
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -25,7 +26,6 @@ var Client = /** @class */ (function () {
 var maria = new Client("maria", true);
 var lucia = new Client("lucia", false);
 var clients = [maria, lucia];
-console.log(clients);
 var BaseContent = /** @class */ (function () {
     function BaseContent(brand, shade, price) {
         this.brand = brand;
@@ -53,7 +53,6 @@ var Foundation = /** @class */ (function (_super) {
 var fitMe = new Foundation('Maybelline FitMe', 280, 'full', 23.95);
 var infallible = new Foundation('Loreal Infallible', 'Golden beige', 'medium', 54);
 var foundations = [fitMe, infallible];
-console.log(foundations);
 var Lipstick = /** @class */ (function (_super) {
     __extends(Lipstick, _super);
     function Lipstick(brand, shade, price) {
@@ -68,4 +67,11 @@ var Lipstick = /** @class */ (function (_super) {
 var colorRichie = new Lipstick('Loreal Color Richie', 'dark peach', 4.5);
 var superStay = new Lipstick('Maybelline Super Stay', 'Seductress', 6.45);
 var lipsticks = [colorRichie, superStay];
-console.log(lipsticks);
+// console.table(clients)
+// console.table(foundations)
+// console.table(lipsticks);
+var buy = function (Client, Foundation, Lipstick) {
+    console.log('Cliente: ' + Client.name, '\n', 'Base: ' + Foundation.brand, Foundation.shade, '\n', 'Labial: ' + Lipstick.brand, Lipstick.shade, '\n', '\n');
+};
+buy(maria, colorRichie, fitMe);
+buy(lucia, colorRichie, superStay);

@@ -1,3 +1,5 @@
+//TODO: averiguar como crear muchos objetos en la misma declaracion new
+
 class Client {
     constructor(
         public name: string,
@@ -8,11 +10,11 @@ class Client {
     }
 }
 
-let maria = new Client("maria", true);
-let lucia = new Client("lucia", false);
+const maria = new Client("maria", true);
+const lucia = new Client("lucia", false);
 
 let clients = [maria, lucia];
-console.log(clients);
+
 
 class BaseContent {
     constructor (
@@ -41,11 +43,10 @@ class Foundation extends BaseContent{
 
 }
 
-let fitMe = new Foundation('Maybelline FitMe', 280, 'full', 23.95);
-let infallible = new Foundation('Loreal Infallible', 'Golden beige', 'medium', 54)
+const fitMe = new Foundation('Maybelline FitMe', 280, 'full', 23.95);
+const infallible = new Foundation('Loreal Infallible', 'Golden beige', 'medium', 54)
 
 let foundations = [fitMe, infallible];
-console.log(foundations);
 
 class Lipstick extends BaseContent {
     constructor(
@@ -57,8 +58,21 @@ class Lipstick extends BaseContent {
     }
 }
 
-let colorRichie = new Lipstick('Loreal Color Richie', 'dark peach', 4.5);
-let superStay = new Lipstick('Maybelline Super Stay', 'Seductress', 6.45);
+const colorRichie = new Lipstick('Loreal Color Richie', 'dark peach', 4.5);
+const superStay = new Lipstick('Maybelline Super Stay', 'Seductress', 6.45);
 
 let lipsticks = [colorRichie, superStay];
-console.log(lipsticks);
+
+// console.table(clients)
+// console.table(foundations)
+// console.table(lipsticks);
+
+const buy = (Client, Foundation, Lipstick) =>{
+    console.log(
+        'Cliente: ' + Client.name, '\n',
+        'Base: ' + Foundation.brand, Foundation.shade, '\n',
+        'Labial: ' + Lipstick.brand, Lipstick.shade, '\n', '\n',)
+}
+
+buy(maria, colorRichie, fitMe);
+buy(lucia, colorRichie, superStay);
