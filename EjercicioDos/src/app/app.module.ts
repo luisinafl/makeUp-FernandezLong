@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CardModule } from './card/card.module';
 import { HeaderModule } from './header/header.module';
-import { ProductsModule } from './views/products/products.module';
+import { HomeModule } from './views/home/home.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +12,7 @@ import { ProductsModule } from './views/products/products.module';
     BrowserModule,
     CardModule,
     HeaderModule,
-    ProductsModule
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
