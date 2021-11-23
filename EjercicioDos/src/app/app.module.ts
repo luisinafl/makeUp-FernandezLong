@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CardModule } from './card/card.module';
 import { HeaderModule } from './header/header.module';
+import { ProductsModule } from './views/products/products.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -10,7 +11,8 @@ import { HeaderModule } from './header/header.module';
   imports: [
     BrowserModule,
     CardModule,
-    HeaderModule
+    HeaderModule,
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
