@@ -4,6 +4,7 @@ import { CardModule } from 'src/app/card/card.module';
 import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { CarouselCustomModule } from 'src/app/carousel/carousel.module';
+import { ModalCustomModule } from 'src/app/modal/modal.module';
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
     CommonModule,
     CardModule,
     RouterModule.forChild(routes),
-    CarouselCustomModule
+    CarouselCustomModule,
+    ModalCustomModule,
   ],
   exports: [HomeComponent]
 })
