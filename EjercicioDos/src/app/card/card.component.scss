@@ -1,35 +1,52 @@
-@import '../../styles.scss';
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-  .card-img-top {
-    height: 30vh;
-    min-width: fit-content;
-    align-self: center;
+@import "../../styles.scss";
+:host {
+  @media (min-width: 769px) {
+    overflow-x: auto;
   }
-  .card-body {
+}
+.grid-card {
+  display: inline-grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 769px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card {
     display: flex;
     flex-direction: column;
-    .card-title {
-      font-size: 1.1rem;
-      margin-bottom: 0;
+    justify-content: center;
+    overflow: hidden;
+    .card-img-top {
+      height: 30vh;
+      width: fit-content;
+      align-self: center;
     }
-    .card-subtitle {
-      color: gray;
-      font-size: 0.8rem;
-    }
-    .card-price {
-      flex-grow: 1;
+    .card-body {
       display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: gray;
-      margin-top: .5rem;
-      margin-bottom: .2rem;
+      flex-direction: column;
+      .card-title {
+        font-size: 1.1rem;
+        margin-bottom: 0;
+      }
+      .card-subtitle {
+        color: gray;
+        font-size: 0.8rem;
+      }
+      .card-price {
+        flex-grow: 1;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: gray;
+        margin-top: 0.5rem;
+        margin-bottom: 0.2rem;
+      }
     }
   }
 }
