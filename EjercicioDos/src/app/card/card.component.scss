@@ -1,7 +1,9 @@
 @import "../../styles.scss";
-:host {
+.grid-card {
+  display: inline-flex;
   overflow-x: auto;
   padding: 5px 0;
+  max-width: 100%;
   &::-webkit-scrollbar {
     height: 5px;
   }
@@ -17,10 +19,6 @@
   &::-webkit-scrollbar-thumb:hover {
     background: #c4c4c4;
   }
-}
-.grid-card {
-  display: inline-flex;
-
   .card {
     display: flex;
     flex-direction: column;
