@@ -1,0 +1,21 @@
+h1 {
+  position: relative;
+  padding-left: 3px;
+  span {
+    color: #1a1a1a;
+    font-style: italic;
+    z-index: 1;
+    position: relative;
+  }
+  .pill {
+    position: absolute;
+    width: 356px;
+    height: 20px;
+    background: #dffe02;
+    opacity: 0.7;
+    z-index: 0;
+    left: 0;
+    transform: skew(347deg);
+    top: 40%;
+  }
+}
