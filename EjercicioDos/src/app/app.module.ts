@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CardModule } from './card/card.module';
+import { FooterModule } from './footer/footer.module';
 import { HeaderModule } from './header/header.module';
 import { HomeModule } from './views/home/home.module';
 @NgModule({
@@ -12,7 +13,8 @@ import { HomeModule } from './views/home/home.module';
     BrowserModule,
     CardModule,
     HeaderModule,
-    HomeModule
+    HomeModule,
+    FooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
