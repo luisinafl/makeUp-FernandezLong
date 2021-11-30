@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardModule } from 'src/app/card/card.module';
 import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from '@angular/router';
+import { CarouselCustomModule } from 'src/app/carousel/carousel.module';
+import { ModalCustomModule } from 'src/app/modal/modal.module';
+import { CardModule } from '../../card/card.module';
+import { UploadModule } from '../../upload/upload.module';
 
 
 const routes: Routes = [
@@ -15,8 +18,11 @@ const routes: Routes = [
   declarations: [HomeComponent],
   imports: [
     CommonModule,
-    CardModule,
     RouterModule.forChild(routes),
+    CarouselCustomModule,
+    ModalCustomModule,
+    CardModule,
+    UploadModule
   ],
   exports: [HomeComponent]
 })

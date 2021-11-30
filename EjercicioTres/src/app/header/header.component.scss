@@ -1,0 +1,13 @@
+.navbar {
+  &.bg-light {
+    background-color: #dbdbdb !important;
+  }
+  .navbar-brand {
+    img {
+      max-height: 50px;
+    }
+  }
+  .nav-link {
+    font-size: 1.2rem;
+  }
+}

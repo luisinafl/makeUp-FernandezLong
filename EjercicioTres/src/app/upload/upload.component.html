@@ -1,6 +1,7 @@
-<div class="grid-card">
-  <div *ngFor="let item of foundations" class="card mx-2">
-    <img src="{{ item.image }}" class="card-img-top" />
+<app-custom-form></app-custom-form>
+<h4>Productos existentes</h4>
+<div class="card-group">
+  <div *ngFor="let item of foundations" class="card mx-1 upload-card">
     <div class="card-body">
       <p class="card-title">
         {{ item.brand }}
@@ -11,8 +12,7 @@
       </p>
     </div>
   </div>
-  <div *ngFor="let item of lipsticks" class="card mx-2">
-    <img src="{{ item.image }}" class="card-img-top" />
+  <div *ngFor="let item of lipsticks" class="card mx-1 upload-card">
 
     <div class="card-body">
       <p class="card-title">
