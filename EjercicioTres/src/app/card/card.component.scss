@@ -1,0 +1,35 @@
+@import '../../styles.scss';
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  .card-img-top {
+    height: 30vh;
+    min-width: fit-content;
+    align-self: center;
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    .card-title {
+      font-size: 1.1rem;
+      margin-bottom: 0;
+    }
+    .card-subtitle {
+      color: gray;
+      font-size: 0.8rem;
+    }
+    .card-price {
+      flex-grow: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: gray;
+      margin-top: .5rem;
+      margin-bottom: .2rem;
+    }
+  }
+}
