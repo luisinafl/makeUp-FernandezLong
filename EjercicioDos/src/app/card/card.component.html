@@ -1,5 +1,5 @@
-<div class="d-flex justify-content-center">
-  <div *ngFor="let item of foundations" class="card mx-2" style="width: 18rem">
+<div class="grid-card">
+  <div *ngFor="let item of foundations" class="card mx-2">
     <img src="{{ item.image }}" class="card-img-top" />
     <div class="card-body">
       <p class="card-title">
@@ -9,10 +9,9 @@
       <p class="card-price">
         ${{ item.price }}
       </p>
-      <a href="#" class="btn btn-primary">Comprar</a>
     </div>
   </div>
-  <div *ngFor="let item of lipsticks" class="card mx-2" style="width: 18rem">
+  <div *ngFor="let item of lipsticks" class="card mx-2">
     <img src="{{ item.image }}" class="card-img-top" />
 
     <div class="card-body">
@@ -23,7 +22,6 @@
       <p class="card-price">
         ${{ item.price }}
       </p>
-      <a href="#" class="btn btn-primary">Comprar</a>
     </div>
   </div>
 </div>

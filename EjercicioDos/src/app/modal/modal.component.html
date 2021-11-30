@@ -1,0 +1,17 @@
+<button type="button" class="btn btn-warning" (click)="openModal(template)">Comprar productos</button>
+<br>
+
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Compra de productos</h4>
+    <button type="button" class="close btn-close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="alert alert-danger">
+      <h6>Ups!</h6>
+      <span>Parece que todavía no sé codear una compra, espere algunas semanas y podrá comprar!</span>
+    </div>
+  </div>
+</ng-template>
