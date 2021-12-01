@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from '@angular/router';
-import { CarouselCustomModule } from 'src/app/carousel/carousel.module';
-import { ModalCustomModule } from 'src/app/modal/modal.module';
-import { CardModule } from '../../card/card.module';
-import { UploadModule } from '../../upload/upload.module';
+import { CarouselCustomModule } from 'src/app/product/carousel/carousel.module';
+import { ModalCustomModule } from 'src/app/components/modal/modal.module';
+import { CardModule } from '../../product/card/card.module';
+import { UploadModule } from '../../components/upload/upload.module';
 
 
 const routes: Routes = [

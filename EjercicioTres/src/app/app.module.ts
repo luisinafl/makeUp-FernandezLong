@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
 import { HomeModule } from './views/home/home.module';
-import { HeaderModule } from './header/header.module';
-import { FooterModule } from './footer/footer.module';
+import { HeaderModule } from './components/header/header.module';
+import { FooterModule } from './components/footer/footer.module';
 @NgModule({
   declarations: [
     AppComponent,

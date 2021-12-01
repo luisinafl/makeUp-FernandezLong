@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { foundations, lipsticks, products } from '../models/products.define'
-
+import { foundations, lipsticks } from 'src/app/models/products.define';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',

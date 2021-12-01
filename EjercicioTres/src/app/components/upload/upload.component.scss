@@ -1,0 +1,19 @@
+@import "../../../styles.scss";
+:host {
+  .card.upload-card {
+    border-left: 1px solid rgba(0, 0, 0, 0.125) !important;
+    .card-body {
+      padding: 0.5rem;
+      .card-title {
+        font-size: 0.9rem;
+      }
+      .card-subtitle {
+        font-size: 0.8rem;
+      }
+      .card-price {
+        margin-bottom: 0 !important;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

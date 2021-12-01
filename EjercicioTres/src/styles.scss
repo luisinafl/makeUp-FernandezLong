@@ -1,2 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~bootstrap/scss/bootstrap.scss';
+@import "~bootstrap/scss/bootstrap.scss";
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,800&display=swap");
+
+h4 {
+  color: gray;
+}
+.btn-coderhouse {
+  border-radius: 0;
+  transform: skew(347deg);
+  background: #dffe02;
+  text-transform: uppercase;
+  padding: 6px 4px;
+  border: none;
+  box-shadow: 2px 2px 6px -1px #00000069;
+  font-family: "JetBrains Mono", monospace;
+  &:hover {
+    box-shadow: none;
+  }
+}
+.card {
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    .card-title {
+      margin-bottom: 0;
+    }
+    .card-subtitle {
+      color: gray;
+    }
+    .card-price {
+      flex-grow: 1;
+      display: flex;
+      align-items: flex-end;
+      font-weight: 600;
+      color: gray;
+    }
+  }
+}
