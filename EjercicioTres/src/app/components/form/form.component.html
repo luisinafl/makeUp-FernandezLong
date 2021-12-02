@@ -1,28 +1,79 @@
 <h3>Agregar un producto nuevo</h3>
-<form action="">
+<form action="" [formGroup]="newItemForm" (ngSubmit)="onSubmit()">
   <div class="row">
     <div class="col-12 col-lg-4">
       <div class="form-group mb-2">
-        <label for="brand">Marca y modelo</label>
-        <input type="text" class="form-control" />
+        <label for="brand"></label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Marca y modelo"
+          formControlName="brand"
+          required
+        />
+        <div
+          *ngIf="
+            newItemForm.get('brand').invalid &&
+            (newItemForm.get('brand').dirty || newItemForm.get('brand').touched)
+          "
+          class="required"
+        >
+          <span *ngIf="newItemForm.get('brand').errors.required">
+            Este campo debe ser completado
+          </span>
+        </div>
       </div>
     </div>
     <div class="col-12 col-lg-4">
       <div class="form-group mb-2">
-        <label for="shade">Shade</label>
-        <input type="text" class="form-control" />
+        <label for="shade"></label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Shade"
+          required
+          formControlName="shade"
+        />
+        <div
+          *ngIf="
+            newItemForm.get('shade').invalid &&
+            (newItemForm.get('shade').dirty || newItemForm.get('shade').touched)
+          "
+          class="required"
+        >
+          <span *ngIf="newItemForm.get('shade').errors.required">
+            Este campo debe ser completado
+          </span>
+        </div>
       </div>
     </div>
     <div class="col-12 col-lg-4">
       <div class="form-group mb-2">
-        <label for="price">Precio</label>
-        <input type="number" class="form-control" />
+        <label for="price"></label>
+        <input
+          type="number"
+          class="form-control"
+          placeholder="Precio"
+          required
+          formControlName="price"
+        />
+        <div
+          *ngIf="
+            newItemForm.get('price').invalid &&
+            (newItemForm.get('price').dirty || newItemForm.get('price').touched)
+          "
+          class="required"
+        >
+          <span *ngIf="newItemForm.get('price').errors.required">
+            Este campo debe ser completado
+          </span>
+        </div>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-12 my-2 text-center">
-      <div class="btn btn-coderhouse">Agregar</div>
+      <button type="submit" class="btn btn-coderhouse">Agregar</button>
     </div>
   </div>
 </form>
