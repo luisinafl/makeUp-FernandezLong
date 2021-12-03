@@ -73,7 +73,7 @@
   </div>
   <div class="row">
     <div class="col-12 my-2 text-center">
-      <button type="submit" class="btn btn-coderhouse">Agregar</button>
+      <button type="submit" class="btn btn-coderhouse" [disabled]="!newItemForm.get('brand').valid &&!newItemForm.get('shade').valid && !newItemForm.get('price').valid">Agregar</button>
     </div>
   </div>
 </form>
